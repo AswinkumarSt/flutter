@@ -3,14 +3,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:newday/pages/first_page.dart';
 import 'package:newday/pages/home_page.dart';
+import 'package:newday/pages/profile.dart';
 import 'package:newday/pages/settings_page.dart';
 
 
 void main() {
   runApp(const MyApp());
-}
-void userTap(){
-  print("the user tapped!");
 }
 
 class MyApp extends StatelessWidget {
@@ -24,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/homepage' :(context) => HomePage(),
         '/settingspage' :(context) => SettingsPage(),
+        '/profilepage' :(context) => Profile(),
       },
     );
   }

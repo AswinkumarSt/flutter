@@ -67,6 +67,14 @@ class _FirstPageState extends State<FirstPage> {
                   Navigator.pushNamed(context, '/settingspage');
                 },
               ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text("P R O F I L E"),
+                onTap:() {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/profilepage');
+                },
+              ),
             ],
           ),
         ),
