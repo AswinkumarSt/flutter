@@ -20,9 +20,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FirstPage(),
       routes: {
-        '/homepage' :(context) => HomePage(),
-        '/settingspage' :(context) => SettingsPage(),
-        '/profilepage' :(context) => Profile(),
+        '/firstpage':(context) =>const FirstPage(),
+        '/homepage' :(context) => const HomePage(),
+        '/settingspage' :(context) => const SettingsPage(),
+        '/profilepage' :(context) => const Profile(),
       },
     );
   }
