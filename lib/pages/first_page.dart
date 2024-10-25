@@ -3,8 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:newday/pages/profile.dart';
 import 'package:newday/pages/settings_page.dart';
-import 'package:newday/pages/home_page.dart';
-
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
 
@@ -21,6 +19,7 @@ class _FirstPageState extends State<FirstPage> {
     });
   }
 
+  // ignore: unused_field
   final List _pages = [
     Profile(),
     SettingsPage(),

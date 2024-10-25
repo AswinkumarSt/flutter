@@ -13,11 +13,18 @@ class Profile extends StatelessWidget {
         backgroundColor: Colors.blue[100],
         leading: null,
       ),
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(padding: EdgeInsets.only(left: 500)),
+          Text("hey"),
+        ],
+      ),
       drawer: Drawer(
         backgroundColor: Colors.deepPurple[100],
         child: Column(
           children: [
-            DrawerHeader(
+           const DrawerHeader(
               child: Icon(
                 Icons.favorite,
                 size: 48,
