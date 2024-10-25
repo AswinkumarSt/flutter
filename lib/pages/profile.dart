@@ -14,14 +14,37 @@ class Profile extends StatelessWidget {
         leading: null,
       ),
       //profile picture
-      body: Column(
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: EdgeInsets.only(left: 90,top: 20),
-            child: Image.asset('lib/assets/images.jpg'),
+          Column(
+            children: [
+              Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: const Icon(
+                    Icons.person,
+                    size: 50,
+                  )),
+            ],
+          ),
+          //textfield
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Name',
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
+
       drawer: Drawer(
         backgroundColor: Colors.deepPurple[100],
         child: Column(
