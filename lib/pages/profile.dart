@@ -7,78 +7,80 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile Page'),
-        titleTextStyle: TextStyle(fontSize: 20),
+        title: const Text('Profile Page'),
+        titleTextStyle: const TextStyle(fontSize: 20),
         centerTitle: true,
         backgroundColor: Colors.blue[100],
-        leading: null,
       ),
-      //profile picture
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            children: [
-              Container(
-                  padding: EdgeInsets.only(top: 10),
-                  child: const Icon(
-                    Icons.person,
-                    size: 50,
-                  )),
-            ],
-          ),
-          //textfield
-          Expanded(
-            child: Column(
+      // profile picture and textfield
+      body: const Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            // Profile icon
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Name',
-                  ),
-                )
+              children: const [
+                Icon(
+                  Icons.person,
+                  size: 200,
+                  color: Colors.blueGrey,
+                ),
               ],
             ),
-          ),
-        ],
+            const SizedBox(height: 50), // Spacing between icon and TextField
+            // Name TextField
+            TextField(
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Name',
+              ),
+            ),
+             const SizedBox(height: 20),
+            TextField(
+              onSubmitted: null,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Message to the world',
+              ),
+            ),
+          ],
+        ),
       ),
-
+      // Drawer for navigation
       drawer: Drawer(
         backgroundColor: Colors.deepPurple[100],
         child: Column(
           children: [
-            const DrawerHeader(
+           const DrawerHeader(
               child: Icon(
                 Icons.favorite,
                 size: 48,
               ),
             ),
 
-            //homepage list tile
+            // Home list tile
             ListTile(
-              leading: Icon(Icons.home_filled),
-              title: Text("H O M E"),
+              leading: const Icon(Icons.home_filled),
+              title: const Text("H O M E"),
               onTap: () {
-                print("hey");
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/homepage');
               },
             ),
-
-            //settingspage list tile
+            // Settings list tile
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("S E T T I N G S"),
+              leading: const Icon(Icons.settings),
+              title: const Text("S E T T I N G S"),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/settingspage');
               },
             ),
+            // Title page list tile
             ListTile(
-              leading: Icon(Icons.backspace_outlined),
-              title: Text("T I T L E P A G E"),
+              leading: const Icon(Icons.backspace_outlined),
+              title: const Text("T I T L E P A G E"),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/firstpage');
